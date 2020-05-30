@@ -13,12 +13,12 @@ pipeline {
                  }
 		 stage('three') {
                  steps {
-                     echo 'my hometown is lucknow'
+                     echo 'i live in lucknow'
                  }
                  }
                  stage('four') {
                  steps {
-                    input('currently i am working as a devops trainee at To The New')
+                    echo('currently i am working as a devops trainee at To The New')
                  }
                  }
 		}
