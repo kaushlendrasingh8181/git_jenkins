@@ -21,5 +21,12 @@ pipeline {
                     echo('currently i am working as a devops trainee at To The New')
                  }
                  }
-		}
+         	 stage('Gradle Build') {
+                 agent any
+                 steps {
+                 sh "gradle clean build"
+            }
+        }	
+
+	}
 		}
