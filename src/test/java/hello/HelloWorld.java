@@ -1,4 +1,4 @@
-package com.bank;
+package hello;
 
 /**
 * Hello world!
@@ -10,3 +10,4 @@ public class App{
       System.out.println( "Hello World!" );
    }
 }
+
