@@ -1,10 +1,5 @@
 apply plugin: 'java'
 
-Jar {
-    baseName = 'gradle-hello-world'
-    version =  '0.1.0'
-}
-
 repositories {
    jcenter()
 }
