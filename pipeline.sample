@@ -31,7 +31,7 @@ pipeline {
 
 		stage('email build status') {
                  steps {
-                mail bcc: '', body: 'sample body', cc: '', from: '', replyTo: '', subject: 'pipeline_gardle output', to: 'kaushlendra8181@gmail.com'
+                mail bcc: '', body: 'sample body', cc: '', from: '', replyTo: '', subject: 'pipeline_gardle output', to: 'kaushlendra.singh@tothenew.com'
 		}
 		}
 
