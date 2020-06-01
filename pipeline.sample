@@ -27,6 +27,14 @@ pipeline {
                  sh "gradle clean build"
             }
         }	
+		stage('consolidated Results')
+		{
+		steps{
+		  input("do you want to capture results?")
+		  junit'**/target/surefire-reports/TEST-*.xml'
+    		  archive 'target/*.jar'
+		}
+		}
 
 	}
 		}
