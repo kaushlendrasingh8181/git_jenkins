@@ -29,11 +29,11 @@ pipeline {
             }
         }	
 
-		stage('email build status') {
-                 steps {
-                mail bcc: '', body: 'sample body', cc: '', from: '', replyTo: '', subject: 'pipeline_gardle output', to: 'kaushlendra.singh@tothenew.com'
-		}
-		}
+		post {
+                  always {
+                     emailext body: 'A Test EMail', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Test'
+                   }
+                  }
 
 	}
 		}
