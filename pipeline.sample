@@ -1,3 +1,4 @@
+
 pipeline {
          agent any
          stages {
@@ -33,6 +34,11 @@ pipeline {
 		  input("do you want to capture results?")
 		  junit'**/target/surefire-reports/TEST-*.xml'
     		  archive 'target/*.jar'
+		}
+		}
+		stage('email build status') {
+                 steps {
+                mail bcc: '', body: 'sample body', cc: '', from: '', replyTo: '', subject: 'pipeline_gardle output', to: 'kaushlendra8181@gmail.com'
 		}
 		}
 
